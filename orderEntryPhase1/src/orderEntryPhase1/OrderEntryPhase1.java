@@ -31,11 +31,23 @@ public class OrderEntryPhase1
 		return itemNumber;		
 	}
 	
+	// Fetch Item Price
+	public static double getItemPrice()
+	{
+		Scanner ipObj = new Scanner(System.in);
+		System.out.println("Enter Item Price: ");
+		
+		String itemPrice = ipObj.nextLine();
+		double price = Double.parseDouble(itemPrice);
+		return price;
+	}
+	
 	// Printout
-	public static void printOut(String itemNumber, String itemDescription)
+	public static void printOut(String itemNumber, String itemDescription, double itemPrice)
 	{
 		System.out.println("Item Number:"+itemNumber);
 		System.out.println("Item Description: "+itemDescription);
+		System.out.println("Item Price: "+itemPrice);
 	}
 	
 	// ------------------------------------------------
@@ -46,8 +58,9 @@ public class OrderEntryPhase1
 		System.out.println("Order Entry: \n");
 		String itemNumber = oep.getItemNumber();
 		String itemDesc = oep.getItemDescription();
+		double itemPrice = oep.getItemPrice();
 		
 		System.out.println("\n");
-		oep.printOut(itemNumber,   itemDesc);
+		oep.printOut(itemNumber, itemDesc, itemPrice);
 	}
 }
