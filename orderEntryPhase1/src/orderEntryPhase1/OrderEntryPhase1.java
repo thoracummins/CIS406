@@ -3,12 +3,51 @@
 //Class Project Phase 1
 
 package orderEntryPhase1;
+import java.util.Scanner;
 
-public class OrderEntryPhase1 {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
+public class OrderEntryPhase1
+{
+
+	// Fetch Item Description - Alphanumeric
+	public static String getItemDescription()
+	{
+		Scanner idObj = new Scanner(System.in);
+		System.out.println("Enter Item Description: ");
+		
+		String itemDesc = idObj.nextLine();
+		return itemDesc;
 	}
-
+	
+	
+	// Fetch Item Number - Alphanumeric
+	public static String getItemNumber()
+	{
+		Scanner inObj = new Scanner(System.in);
+		System.out.println("Enter Item Number: ");
+		
+		String itemNumber = inObj.nextLine();
+		return itemNumber;		
+	}
+	
+	// Printout
+	public static void printOut(String itemNumber, String itemDescription)
+	{
+		System.out.println("Item Number:"+itemNumber);
+		System.out.println("Item Description: "+itemDescription);
+	}
+	
+	// ------------------------------------------------
+	public static void main(String[] args)
+	{
+		OrderEntryPhase1 oep = new OrderEntryPhase1();
+		
+		System.out.println("Order Entry: \n");
+		String itemNumber = oep.getItemNumber();
+		String itemDesc = oep.getItemDescription();
+		
+		System.out.println("\n");
+		oep.printOut(itemNumber,   itemDesc);
+	}
 }
