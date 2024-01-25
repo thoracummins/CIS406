@@ -5,8 +5,6 @@
 package orderEntryPhase1;
 import java.util.Scanner;
 
-
-
 public class OrderEntryPhase1
 {
 	// private vars
@@ -14,46 +12,71 @@ public class OrderEntryPhase1
 	private String itemNumber;
 	private double itemPrice;
 	private int itemQtyOrdered;
+	private double netPrice;
+	private double totDiscount;
+	private double totTax;
 	
 	// Fetch Item Description - Alphanumeric
-	public String getItemDescription()
+	public void getItemDescription()
 	{
 		Scanner idObj = new Scanner(System.in);
 		System.out.println("Enter Item Description: ");
 		
 		itemDescription = idObj.nextLine();
-		return itemDescription;
 	}
 	
-	
 	// Fetch Item Number - Alphanumeric
-	public String getItemNumber()
+	public void getItemNumber()
 	{
 		Scanner inObj = new Scanner(System.in);
 		System.out.println("Enter Item Number: ");
 		
 		itemNumber = inObj.nextLine();
-		return itemNumber;		
 	}
 	
 	// Fetch Item Price
-	public double getItemPrice()
+	public void getItemPrice()
 	{
 		Scanner ipObj = new Scanner(System.in);
 		System.out.println("Enter Item Price: ");
 		
 		itemPrice = ipObj.nextDouble();
-		return itemPrice;
+	}
+	
+	//Fetch Net Price
+	public void getNetPrice()
+	{
+		Scanner npObj = new Scanner(System.in);
+		System.out.println("Enter Net Price: ");
+		
+		netPrice = npObj.nextDouble();
 	}
 	
 	//Fetch Quantity
-	private int getQuantityOrdered()
+	private void getQuantityOrdered()
 	{
 		Scanner qObj = new Scanner(System.in);
 		System.out.println("Enter Quantity Ordered: ");
 		
 		itemQtyOrdered = qObj.nextInt();
-		return itemQtyOrdered;
+	}
+	
+	//Fetch Total Discount
+	private void getTotalDiscount()
+	{
+		Scanner tdObj = new Scanner(System.in);
+		System.out.println("Enter Total Discount: $");
+		
+		totDiscount = tdObj.nextDouble();
+	}
+	
+	//Fetch Total Tax
+	private void getTotalTax()
+	{
+		Scanner txObj = new Scanner(System.in);
+		System.out.println("Enter Tax: $");
+		
+		totTax = txObj.nextDouble();
 	}
 	
 	// Printout
@@ -62,7 +85,10 @@ public class OrderEntryPhase1
 		System.out.println("Item Number:"+itemNumber);
 		System.out.println("Item Description: "+itemDescription);
 		System.out.println("Item Price: $"+itemPrice);
-		System.out.println("Item Quantity Ordered: "+itemQtyOrdered);
+		System.out.println("Quantity Ordered: "+itemQtyOrdered);
+		System.out.println("Total Tax: $"+totTax);
+		System.out.println("Total Discount: $"+totDiscount);
+		System.out.println("Net Price: $"+netPrice);
 	}
 	
 	// ------------------------------------------------
@@ -75,10 +101,12 @@ public class OrderEntryPhase1
 		oep.getItemDescription();
 		oep.getItemPrice();
 		oep.getQuantityOrdered();
+		oep.getTotalTax();
+		oep.getTotalDiscount();
+		oep.getNetPrice();
 		
 		// Display Data
 		System.out.println("Order Entry: \n");
-		System.out.println("\n");
 		oep.printOut();
 	}
 }
