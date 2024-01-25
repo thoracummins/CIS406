@@ -82,13 +82,17 @@ public class OrderEntryPhase1
 	// Printout
 	public void printOut()
 	{
-		System.out.println("Item Number:"+itemNumber);
-		System.out.println("Item Description: "+itemDescription);
-		System.out.println("Item Price: $"+itemPrice);
-		System.out.println("Quantity Ordered: "+itemQtyOrdered);
-		System.out.println("Total Tax: $"+totTax);
-		System.out.println("Total Discount: $"+totDiscount);
-		System.out.println("Net Price: $"+netPrice);
+		//System.out.println("Item Number:"+itemNumber);
+		//System.out.println("Item Description: "+itemDescription);
+		//System.out.println("Item Price: $"+itemPrice);
+		//System.out.println("Quantity Ordered: "+itemQtyOrdered);
+		//System.out.println("Total Tax: $"+totTax);
+		//System.out.println("Total Discount: $"+totDiscount);
+		//System.out.println("Net Price: $"+netPrice);
+		
+		System.out.println("Item Number \tItem Description \tItem Price \tQuantity \tTax \tDiscount \tNet Price");
+		System.out.println("  "+itemNumber+"\t      "+itemDescription+"\t"+itemPrice+"\t"+itemQtyOrdered);
+		System.out.println("\t"+totTax+"\t"+totDiscount+"\t"+netPrice);
 	}
 	
 	// ------------------------------------------------
