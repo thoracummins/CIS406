@@ -37,9 +37,8 @@ public class OrderEntryPhase1
 		Scanner ipObj = new Scanner(System.in);
 		System.out.println("Enter Item Price: ");
 		
-		String itemPrice = ipObj.nextLine();
-		double price = Double.parseDouble(itemPrice);
-		return price;
+		double itemPrice = ipObj.nextDouble();
+		return itemPrice;
 	}
 	
 	// Printout
@@ -47,7 +46,7 @@ public class OrderEntryPhase1
 	{
 		System.out.println("Item Number:"+itemNumber);
 		System.out.println("Item Description: "+itemDescription);
-		System.out.println("Item Price: "+itemPrice);
+		System.out.println("Item Price: $"+itemPrice);
 	}
 	
 	// ------------------------------------------------
