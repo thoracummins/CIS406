@@ -90,9 +90,10 @@ public class OrderEntryPhase1
 		//System.out.println("Total Discount: $"+totDiscount);
 		//System.out.println("Net Price: $"+netPrice);
 		
+		System.out.println("\n Order Entry\n");
 		System.out.println("Item Number \tItem Description \tItem Price \tQuantity \tTax \tDiscount \tNet Price");
-		System.out.println("  "+itemNumber+"\t      "+itemDescription+"\t"+itemPrice+"\t"+itemQtyOrdered);
-		System.out.println("\t"+totTax+"\t"+totDiscount+"\t"+netPrice);
+		System.out.println("  "+itemNumber+"\t     "+itemDescription+"\t\t  "+itemPrice+"\t\t   "+itemQtyOrdered+ 
+				           "\t\t"+totTax+"\t  "+totDiscount+"\t\t  "+netPrice);
 	}
 	
 	// ------------------------------------------------
